@@ -1,2 +1,2 @@
 mkdocs-material
-mkdocs-minify-plugin
+#mkdocs-minify-plugin

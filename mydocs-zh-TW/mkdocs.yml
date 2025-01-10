@@ -44,17 +44,17 @@ plugins:
       tags_file: tags.md      
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-  - minify:
-      minify_html: true    
   - blog 
 
 extra:
   alternate:
+    # Note: These links are for the deployed site. 
+    # For local development, use relative paths (/en/ and /zh-TW/) instead.
     - name: English
-      link: /myDocs/en/
+      link: https://crystalhhc.github.io/myDocs/en/
       lang: en
     - name: 正體中文
-      link: /myDocs/zh-TW/
+      link: https://crystalhhc.github.io/myDocs/zh-TW/
       lang: zh-TW
 
 # Extensions
