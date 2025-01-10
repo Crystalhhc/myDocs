@@ -1,4 +1,27 @@
 # MKdocs for Multi-language
+## Project Layout
+
+```
+myDocs/
+├── .venv/                 # Virtual environment directory
+├── mydocs-en/             # English documentation project
+│   ├── docs/
+│   │   ├── index.md       # The documentation homepage (English)
+│   │   ├── blog/
+│   │   │   ├── posts/
+│   │   │   └── index.md
+│   │   └── ...            # Other markdown pages, images and other files
+│   └── mkdocs.yml         # The configuration file for English docs
+├── mydocs-zh-TW/          # Traditional Chinese documentation project
+│   ├── docs/
+│   │   ├── index.md       # The documentation homepage (Traditional Chinese)
+│   │   ├── blog/
+│   │   │   ├── posts/
+│   │   │   └── index.md
+│   │   └── ...            # Other markdown pages, images and other files
+│   └── mkdocs.yml         # The configuration file for Traditional Chinese docs
+└── README.md              # This file, containing project overview and instructions
+```
 ## MKDocs Installaiton
 1. Create a new Directory for root of  `myDocs`
 ```bash
@@ -52,31 +75,16 @@ You can also use different IP addresses if needed:
 mkdocs serve -f /Users/chenhsihu/myDocs/mydocs-en/mkdocs.yml -a 127.0.0.1:8000
 mkdocs serve -f /Users/chenhsihu/myDocs/mydocs-zh-TW/mkdocs.yml -a 127.0.0.2:8000
 ```
-## Project Layout
-```bash
-myDocs/
-├── .venv/                 # Virtual environment directory
-├── mydocs-en/             # English documentation project
-│   ├── docs/
-│   │   ├── index.md       # The documentation homepage (English)
-│   │   └── ...            # Other markdown pages, images and other files
-│   └── mkdocs.yml         # The configuration file for English docs
-├── mydocs-zh-TW/          # Traditional Chinese documentation project
-│   ├── docs/
-│   │   ├── index.md       # The documentation homepage (Traditional Chinese)
-│   │   └── ...            # Other markdown pages, images and other files
-│   └── mkdocs.yml         # The configuration file for Traditional Chinese docs
-└── README.md              # This file, containing project overview and instructions
 
-## Commands
+## MkDocs Commands
 
-* `mkdocs new [dir-name]` - Create a new project.
+* `mkdocs new <dir-name>` - Create a new project.
 * `mkdocs serve` - Start the live-reloading docs server.
 * `mkdocs build` - Build the documentation site.
 * `mkdocs -h` - Print help message and exit.
 
 ## Setup Blog
-1. add `blog` to `plugins` list in `mkdocs.yml` file
+1. add `blog` to plugins list in `mkdocs.yml` file
 ```yml title="mydocs-en/mkdocs.yml"
 plugings:
     - search
@@ -191,7 +199,7 @@ touch README.md
 
 ```bash
 git add .
-git commit -m "first commit"
+git commit -m "initial commit"
 git branch -M main
 git remote add origin https://github.com/Crystalhhc/myDocs.git
 git push -u origin main
