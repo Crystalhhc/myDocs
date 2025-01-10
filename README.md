@@ -268,3 +268,18 @@ These changes will ensure that your
 - English version: https://crystalhhc.github.io/myDocs/en/
 - Chinese version: https://crystalhhc.github.io/myDocs/zh-TW/
 - Root URL (https://crystalhhc.github.io/myDocs/) will redirect to the English version
+
+!!!Note
+If have problems with deployment, please chdeck:
+1. Check Repository Permissions:
+Go to your GitHub repository's settings, then to "Actions" under "Code and automation" in the left sidebar. Make sure "Read and write permissions" is selected under "Workflow permissions".
+2. Verify GitHub Pages Settings:
+In your repository settings, go to "Pages" and ensure that the source is set to "Deploy from a branch" and the branch is set to "gh-pages".
+
+3. Update your workflow file:
+Modify your .github/workflows/deploy-docs.yml file to use a Personal Access Token (PAT) instead of the default GITHUB_TOKEN. Here's how to do it:
+a. Create a Personal Access Token:
+Go to your GitHub account settings
+Click on "Developer settings" in the left sidebar
+Click on "Personal access tokens" and then "Tokens (classic)"
+Generate a new token with the "repo" scope
