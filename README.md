@@ -249,8 +249,19 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs-material
-      - run: pip install mkdocs-minify-plugin
-      - run: mkdocs gh-deploy --force --config-file mydocs-en/mkdocs.yml
-      - run: mkdocs gh-deploy --force --config-file mydocs-zh-TW/mkdocs.yml
+      - run: mkdocs build --config-file mydocs-en/mkdocs.yml --site-dir site/en
+      - run: mkdocs build --config-file mydocs-zh-TW/mkdocs.yml --site-dir site/zh-TW
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
 ```
 This workflow will automatically build and deploy both language versions of your documentation whenever you push changes to the main branch.
+9. After pushing these changes, go to your GitHub repository settings:
+
+- Navigate to "Settings" > "Pages"
+- Under "Source", select the gh-pages branch
+- For the folder, select / (root)
+
+These changes will ensure that your English documentation is available at https://crystalhhc.github.io/myDocs/en/ and your Traditional Chinese documentation at https://crystalhhc.github.io/myDocs/zh-TW/.

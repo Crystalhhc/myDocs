@@ -39,19 +39,13 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 plugins:
-  - search
-#  - i18n:
-#      default_language: en
-#      languages:
-#        en:
-#          name: English
-#          build: true
-#       zh-TW:
-#          name: 正體中文
-#          build: true 
   - tags:
       tags_file: tags.md      
-  - blog 
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true    
+  - blog
 
 extra:
   alternate:
@@ -122,7 +116,7 @@ nav:
     - Overview: projects/index.md
     - OCR: ocr/index.md
     - Document AI: doc_ai/index.md
-    - Table Information Extraction: /en/docai/table.md
+    - Table Information Extraction: docai/table.md
   - OCR: 
     - Overview: ocr/index.md
     - Introductions: ocr/introduction.md
