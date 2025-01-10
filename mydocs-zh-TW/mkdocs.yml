@@ -50,12 +50,12 @@ plugins:
 extra:
   alternate:
     - name: English
-      link: https://crystalhhc.github.io/myDocs/en/
+      link: /myDocs/en/
       lang: en
     - name: 正體中文
-      link: https://crystalhhc.github.io/myDocs/zh-TW/
+      link: /myDocs/zh-TW/
       lang: zh-TW
-
+use_directory_urls: false
 # Extensions
 markdown_extensions:
   - abbr
@@ -115,7 +115,7 @@ nav:
     - Overview: projects/index.md
     - OCR: ocr/index.md
     - Document AI: doc_ai/index.md
-    - Table Information Extraction: /en/docai/table.md
+    - Table Information Extraction: docai/table.md
   - OCR: 
     - Overview: ocr/index.md
     - Introductions: ocr/introduction.md

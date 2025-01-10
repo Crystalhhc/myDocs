@@ -74,7 +74,7 @@ By using different port numbers (8000 and 8001 in this example), you can run bot
 You can also use different IP addresses if needed:
 ```bash
 mkdocs serve -f /Users/chenhsihu/myDocs/mydocs-en/mkdocs.yml -a 127.0.0.1:8000
-mkdocs serve -f /Users/chenhsihu/myDocs/mydocs-zh-TW/mkdocs.yml -a 127.0.0.2:8000
+mkdocs serve -f /Users/chenhsihu/myDocs/mydocs-zh-TW/mkdocs.yml -a 127.0.0.1:8001
 ```
 
 ## MkDocs Commands

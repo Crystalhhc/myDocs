@@ -50,12 +50,12 @@ plugins:
 extra:
   alternate:
     - name: English
-      link: https://crystalhhc.github.io/myDocs/en/
+      link: /myDocs/en/
       lang: en
     - name: 正體中文
-      link: https://crystalhhc.github.io/myDocs/zh-TW/
+      link: /myDocs/zh-TW/
       lang: zh-TW
-
+use_directory_urls: false
 # Extensions
 markdown_extensions:
   - abbr
