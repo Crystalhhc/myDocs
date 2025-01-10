@@ -56,10 +56,10 @@ plugins:
 extra:
   alternate:
     - name: English
-      link: http://127.0.0.1:8000/en/
+      link: https://crystalhhc.github.io/myDocs/en/
       lang: en
     - name: 正體中文
-      link: http://127.0.0.1:8001/zh-TW/
+      link: https://crystalhhc.github.io/myDocs/zh-TW/
       lang: zh-TW
 
 # Extensions

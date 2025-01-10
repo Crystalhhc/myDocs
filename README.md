@@ -229,10 +229,12 @@ mkdocs gh-deploy --force
 6. Go to your GitHub repository settings, navigate to the "Pages" section, and ensure that the source is set to the gh-pages branch.
 
 7. Your documentation should now be available at:
-English: https://crystalhhc.github.io/myDocs/en/
-Traditional Chinese: https://crystalhhc.github.io/myDocs/zh-TW/
-8. To automate this process, you can set up a GitHub Actions workflow. Create a file named .github/workflows/deploy-docs.yml in your repository with the following content:
-```yml title="deploy-docs.yml"
+English: 
+`https://crystalhhc.github.io/myDocs/en/`
+Traditional Chinese: 
+`https://crystalhhc.github.io/myDocs/zh-TW/`
+8. To automate this process, you can set up a GitHub Actions workflow. Create a file named `.github/workflows/deploy-docs`.yml in your repository with the following content:
+```yml title=".github/workflows/deploy-docs.yml"
 name: Deploy MkDocs
 on:
   push:
@@ -247,6 +249,7 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs-material
+      - run: pip install mkdocs-minify-plugin
       - run: mkdocs gh-deploy --force --config-file mydocs-en/mkdocs.yml
       - run: mkdocs gh-deploy --force --config-file mydocs-zh-TW/mkdocs.yml
 ```
