@@ -1,6 +1,6 @@
 site_name: My Docs - English
-site_name: MyDocs
-site_url: https://mydomain.org/en/ # instead of 'http://mydomain.org/mydocs'
+#site_url: https://mydomain.org/en/ # instead of 'http://mydomain.org/mydocs'
+site_url: https://crystalhhc.github.io/myDocs/en/
 theme:
   name: material
   language: en

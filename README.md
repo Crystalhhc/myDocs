@@ -1,4 +1,5 @@
 # MKdocs for Multi-language
+
 ## Project Layout
 
 ```
@@ -205,4 +206,48 @@ git remote add origin https://github.com/Crystalhhc/myDocs.git
 git push -u origin main
 ```
 ## Publish in Github Pages
-1. 
+1. Ensure that the project is already pushed to GitHub
+2. Create a new branch named `gh-pages` in your repository. This branch will be used to host your built documentation.
+3. Configure your `mkdocs.yml` files for both `English` and `Traditional Chinese` versions to use the gh-deploy feature. Add the following to both `mkdocs.yml` files:
+```yml title="mkdocs-en/mkdocs.yml"
+site_url: https://crystalhhc.github.io/myDocs/en/
+```
+
+```yml title="mkdocs-zh-TW/mkdocs.yml"
+site_url: https://crystalhhc.github.io/myDocs/zh-TW/
+```
+4. Build and deploy your English documentation:
+```bash
+cd ~/myDocs/mydocs-en
+mkdocs gh-deploy --force
+```
+5. Build and deploy your Traditional Chinese documentation:
+```bash
+cd ~/myDocs/mydocs-zh-TW
+mkdocs gh-deploy --force
+```
+6. Go to your GitHub repository settings, navigate to the "Pages" section, and ensure that the source is set to the gh-pages branch.
+
+7. Your documentation should now be available at:
+English: https://crystalhhc.github.io/myDocs/en/
+Traditional Chinese: https://crystalhhc.github.io/myDocs/zh-TW/
+8. To automate this process, you can set up a GitHub Actions workflow. Create a file named .github/workflows/deploy-docs.yml in your repository with the following content:
+```yml title="deploy-docs.yml"
+name: Deploy MkDocs
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - run: pip install mkdocs-material
+      - run: mkdocs gh-deploy --force --config-file mydocs-en/mkdocs.yml
+      - run: mkdocs gh-deploy --force --config-file mydocs-zh-TW/mkdocs.yml
+```
+This workflow will automatically build and deploy both language versions of your documentation whenever you push changes to the main branch.

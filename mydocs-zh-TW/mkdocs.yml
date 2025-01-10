@@ -1,5 +1,6 @@
-site_name: My Docs Chinese
-site_url: https://mydomain.org/zh-TW # instead of 'http://mydomain.org/mydocs'
+site_name: My Docs - Chinese
+#site_url: https://mydomain.org/zh-TW # instead of 'http://mydomain.org/mydocs'
+site_url: https://crystalhhc.github.io/myDocs/zh-TW/
 theme:
   name: material
   language: zh-TW
