@@ -1,6 +1,7 @@
 site_name: My Docs - English
-#site_url: https://mydomain.org/en/ # instead of 'http://mydomain.org/mydocs'
 site_url: https://crystalhhc.github.io/myDocs/en/
+use_directory_urls: false
+
 theme:
   name: material
   language: en
@@ -55,7 +56,7 @@ extra:
     - name: 正體中文
       link: /myDocs/zh-TW/
       lang: zh-TW
-use_directory_urls: false
+
 # Extensions
 markdown_extensions:
   - abbr

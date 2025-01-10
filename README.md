@@ -264,4 +264,7 @@ This workflow will automatically build and deploy both language versions of your
 - Under "Source", select the gh-pages branch
 - For the folder, select / (root)
 
-These changes will ensure that your English documentation is available at https://crystalhhc.github.io/myDocs/en/ and your Traditional Chinese documentation at https://crystalhhc.github.io/myDocs/zh-TW/.
+These changes will ensure that your 
+- English version: https://crystalhhc.github.io/myDocs/en/
+- Chinese version: https://crystalhhc.github.io/myDocs/zh-TW/
+- Root URL (https://crystalhhc.github.io/myDocs/) will redirect to the English version
