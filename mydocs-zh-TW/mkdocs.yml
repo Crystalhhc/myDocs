@@ -51,7 +51,7 @@ extra:
     # Note: These links are for the deployed site. 
     # For local development, use relative paths (/en/ and /zh-TW/) instead.
     - name: English
-      link: https://crystalhhc.github.io/myDocs/en/
+      link: https://crystalhhc.github.io/myDocs/
       lang: en
     - name: 正體中文
       link: https://crystalhhc.github.io/myDocs/zh-TW/

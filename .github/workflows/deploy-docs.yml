@@ -23,7 +23,7 @@ jobs:
       - name: Build English docs
         run: |
           cd mydocs-en
-          mkdocs build --site-dir ../site/en
+          mkdocs build --site-dir ../site
 
       - name: Build Chinese docs
         run: |
