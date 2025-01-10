@@ -13,7 +13,6 @@ links:
 tags:
   - ocr
   - api
-  - ai 
 ---
 
 # My First Blog Post
