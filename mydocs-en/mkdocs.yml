@@ -27,18 +27,34 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
-  palette:  
-    - primary: teal
-      # Palette toggle for light mode
-    - scheme: default
+    - content.code.copy
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
       toggle:
-        icon: material/brightness-7 
+        icon: material/brightness-7
         name: Switch to dark mode
     # Palette toggle for dark mode
-    - scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+  font:
+  font:
+    text: 
+      - Roboto
+      - Noto Sans TC
+    code: 
+      - Roboto Mono
+      - Noto Sans TC
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
+
 plugins:
   - tags:
       tags_file: tags.md      
@@ -107,8 +123,8 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
-not_in_nav: |
-  /tutorials/**/*.md
+#not_in_nav: |
+#  /tutorials/**/*.md
 
 # nav
 nav:

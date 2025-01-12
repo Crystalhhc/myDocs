@@ -27,18 +27,33 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
-  palette:  
-    - primary: teal
-      # Palette toggle for light mode
-    - scheme: default
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
       toggle:
-        icon: material/brightness-7 
+        icon: material/brightness-7
         name: Switch to dark mode
     # Palette toggle for dark mode
-    - scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+
+  font:
+  font:
+    text: 
+      - Roboto
+      - Noto Sans TC
+    code: 
+      - Roboto Mono
+      - Noto Sans TC
+  favicon: assets/favicon.png
+  icon:
+    logo: logo        
 plugins:
   - tags:
       tags_file: tags.md      
@@ -55,20 +70,7 @@ extra:
       lang: en
     - name: 正體中文
       link: https://crystalhhc.github.io/myDocs/zh-TW/
-      lang: zh-TW
-  i18n:
-    zh-TW:
-      nav:
-        首頁: Home
-        Projects: 專案
-        OCR: OCR
-        文件智能: Document AI
-        概括: Overview
-        介紹: Introduction
-        路線圖: Roadmap
-        特點: Features
-        文章: Blog
-        標籤: Tags    
+      lang: zh-TW   
 
 # Extensions
 markdown_extensions:
@@ -127,8 +129,7 @@ nav:
   - 首頁: 
       index.md
   - 計劃:
-      - 計劃概覽: 
-          projects/index.md
+      - projects/index.md
       - OCR: 
           ocr/index.md
   - OCR: 
